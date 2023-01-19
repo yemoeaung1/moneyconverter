@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Number to Word Converter</title>
+    <title>Number to Word Converter</title>
 </head>
 <body>
-    <form action="{{ url_for("convert")}}" method="POST">
+    <form action="{{ url_for("convert") }}" method="POST">
         <div>
             <label for="amount" >Enter amount(No $ sign) </label>
             <input type ="text" name="amount" placeholder="Enter without dollar sign">
@@ -15,5 +15,8 @@
             <button type="submit">Convert</button>
         </div>
     </form>
+    {% block main %}
+    <p> {{ result }} </p>
+    {% endblock %}
 </body>
 </html>
